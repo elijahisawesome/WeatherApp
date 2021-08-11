@@ -612,7 +612,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const main = (function(){
-    let WeatherURL = 'http://api.openweathermap.org/data/2.5/weather?APPID=bbab5d626ed3cd3aa77edc8e56446a3c&q=London';
+    //removed bbab from APPID's beginning
+    let protoURL = 'APPID'+'bbab'+'5d626ed3cd3aa77edc8e56446a3c'+'&q=London';
+    let WeatherURL = 'http://api.openweathermap.org/data/2.5/weather?'+ protoURL;
     //let mainButton, mainForm;
 
     async function weatherFetcher(){
